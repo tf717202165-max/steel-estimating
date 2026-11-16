@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steel Estimating with AI-Driven Tekla Modelling</title>
+<meta name="description" content="Structural steel tender take-offs from an AI-driven Tekla Structures model, reviewed by an experienced estimator. Watch a real model being built, open the models and download the bills of materials.">
+<style>
+:root{--navy:#16324f;--ink:#1c2733;--mute:#5b6b7a;--line:#d9dfe5;--bg:#f5f7f9;--amber:#e8891c;--blue:#4d8cd9;--grey:#999}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:700;font-size:20px;color:var(--navy);letter-spacing:.3px;text-decoration:none}.brand span{color:var(--amber)}
+nav a{margin-left:20px;font-size:14px;text-decoration:none;color:var(--mute)}nav a:hover{color:var(--navy)}
+.btn{display:inline-block;background:var(--amber);color:#fff;font-weight:600;padding:12px 22px;border-radius:6px;text-decoration:none;border:0;font-size:15px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}.btn.sm{padding:7px 14px;font-size:13.5px}
+.hero{background:linear-gradient(180deg,#fff 0,var(--bg) 100%);padding:60px 0 50px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:1px;color:var(--amber);text-transform:uppercase;margin-bottom:10px}
+h1{font-size:40px;line-height:1.13;margin:0 0 16px;color:var(--navy)}
+.lead{font-size:18px;color:#3a4856;margin:0 0 24px;max-width:34em}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.flow{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 24px rgba(22,50,79,.08);padding:18px}
+.flow h4{margin:0 0 12px;font-size:12.5px;letter-spacing:.6px;color:var(--mute)}
+.fstep{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding:8px 0;border-top:1px solid #edf0f3}.fstep:first-of-type{border-top:0}
+.fstep i{font-style:normal;width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;background:var(--navy)}
+.fstep i.me{background:var(--amber)}.fstep b{display:block;font-size:14.5px;color:var(--navy)}.fstep span{font-size:13px;color:var(--mute)}
+section{padding:60px 0}section.alt{background:var(--bg)}
+h2{font-size:28px;margin:0 0 8px;color:var(--navy)}.sub{color:var(--mute);margin:0 0 28px;max-width:46em}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px}.box h3{margin:0 0 6px;font-size:17px;color:var(--navy)}.box p{margin:0;color:#3a4856;font-size:15px}
+.stat b{display:block;font-size:30px;color:var(--navy);line-height:1.2}.stat span{color:var(--mute);font-size:13.5px}
+.demo{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#eef1f4;box-shadow:0 6px 24px rgba(22,50,79,.08)}
+.demo iframe{display:block;width:100%;height:600px;border:0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.tabs button{font:inherit;font-size:13.5px;padding:7px 14px;border-radius:16px;border:1px solid var(--line);background:#fff;color:var(--mute);cursor:pointer}
+.tabs button.cur{background:var(--navy);color:#fff;border-color:var(--navy)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.split>div{padding:20px}.split>div+div{border-left:1px solid var(--line)}.split h3{margin:0 0 10px;font-size:15px;letter-spacing:.4px}
+.split ul{margin:0;padding-left:18px;font-size:14.5px;color:#3a4856}.split li{margin:5px 0}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;color:#fff;border-radius:4px;padding:2px 8px;margin-right:6px;vertical-align:2px}
+.case{display:flex;flex-direction:column}.case p{flex:1}.case .meta{font-size:13px;color:var(--mute);margin:10px 0}.case .links{display:flex;gap:8px;flex-wrap:wrap}
+.case .chip{display:inline-block;font-size:11.5px;color:var(--navy);background:#eaf1f8;border-radius:10px;padding:1px 8px;margin:0 4px 6px 0}
+.check{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.svgbox{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px}
+.imgs img{width:100%;display:block;border-radius:10px 10px 0 0}.caption{font-size:12.5px;color:var(--mute);padding:9px 14px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}form label{font-size:13px;color:var(--mute);display:block;margin-bottom:4px}
+input,textarea,select{width:100%;padding:11px;border:1px solid #c5ced6;border-radius:6px;font:inherit}textarea{min-height:96px}.full{grid-column:1/-1}
+footer{background:var(--navy);color:#c9d4de;padding:28px 0;font-size:13.5px}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.note{font-size:12.5px;color:var(--mute);margin-top:10px}
+@media(max-width:900px){.hero .wrap,.grid3,.grid2,.grid4,form,.check,.split{grid-template-columns:1fr}.split>div+div{border-left:0;border-top:1px solid var(--line)}h1{font-size:31px}nav{display:none}.demo iframe{height:760px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="#top">Rapid<span>Steel</span> MTO</a>
+  <nav><a href="#build">Model build</a><a href="#ai">AI workflow</a><a href="#judgement">Estimating</a><a href="#work">Projects</a><a href="#about">About</a><a href="#quote">Get a quote</a></nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="kicker">Steel estimating · AI-driven Tekla modelling</div>
+    <h1>Steel take-offs from an AI-built Tekla model, checked by an estimator.</h1>
+    <p class="lead">AI reads the tender drawings and builds the steel in Tekla Structures, member by member. I review the scope, the quantities and the risks. You get a bill of materials, a 3D model you can open and check, and a list of assumptions and drawing queries, usually within 24 to 48 hours.</p>
+    <div class="cta"><a class="btn" href="#build">Watch a model being built</a><a class="btn ghost" href="#work">See the projects</a></div>
+  </div>
+  <div class="flow" aria-label="Who does what">
+    <h4>WHO DOES WHAT</h4>
+    <div class="fstep"><i>AI</i><div><b>Reads every drawing sheet</b><span>Grids, levels, member schedules, sections, details and notes</span></div></div>
+    <div class="fstep"><i>AI</i><div><b>Builds the model in Tekla Structures</b><span>Thousands of members written through the Tekla API, each one tagged with its drawing reference</span></div></div>
+    <div class="fstep"><i>AI</i><div><b>Checks the model</b><span>Clash check, supports, double counts, completeness against the schedules</span></div></div>
+    <div class="fstep"><i class="me">ME</i><div><b>Reviews scope and quantities</b><span>Inclusions, exclusions, assumptions, drawing queries</span></div></div>
+    <div class="fstep"><i class="me">ME</i><div><b>Issues the tender pack</b><span>BOM workbook, IFC model and query list, with revisions tracked</span></div></div>
+  </div>
+</div></div>
+
+<section style="padding:34px 0;border-bottom:1px solid var(--line)"><div class="wrap grid4">
+  <div class="stat"><b>5</b><span>tender models built with AI and published here</span></div>
+  <div class="stat"><b>23,500+</b><span>members and plates modelled</span></div>
+  <div class="stat"><b>613 t</b><span>largest job: industrial plant, steel and plates</span></div>
+  <div class="stat"><b>24–48 h</b><span>typical turnaround from complete drawings</span></div>
+</div></section>
+
+<section id="build"><div class="wrap">
+  <h2>Watch a real model being built</h2>
+  <p class="sub">This is the delivered tender model, played back in the order it is built: grids and levels, columns, rafters and beams, bracing, purlins and girts, bridging and fly braces, then connections. At every step you can see what the AI does and what I check. Drag to rotate; click a step to jump to it.</p>
+  <div class="tabs" id="demoTabs"><button data-case="warehouse" class="cur">Warehouse &amp; office · 8,879 parts</button><button data-case="haigslea">School hall · 916 parts</button><button data-case="anzac-avenue">Retail · 1,312 parts</button><button data-case="plant">Industrial plant · 12,226 parts</button></div>
+  <div class="demo"><iframe id="demo" title="Model build sequence" loading="lazy" src="viewer/build.html?case=warehouse&embed=1"></iframe></div>
+  <p class="note">Playback of the finished model, sorted by member type and position. <a href="viewer/build.html?case=warehouse" target="_blank">Open full screen ↗</a></p>
+</div></section>
+
+<section class="alt" id="ai"><div class="wrap">
+  <h2>AI-driven modelling, estimator-led review</h2>
+  <p class="sub">AI does the reading, the repetitive modelling and the checking. Each step must pass before the next one starts. The judgement calls stay with me: scope, pricing basis, risk and clarifications.</p>
+  <div class="grid3">
+    <div class="box"><h3>1 · Read the drawings</h3><p>Every sheet is read: framing plans, member schedules, sections, connection details and notes. Architecture is used for position, structure for size. Conflicts between them are listed, not guessed.</p></div>
+    <div class="box"><h3>2 · Plan every member</h3><p>Each member gets a section, end points, levels and a source: the sheet and the place it was read from, and whether it is confirmed, assumed or a tender allowance.</p></div>
+    <div class="box"><h3>3 · Build in Tekla Structures</h3><p>Members, plates and cuts are written into Tekla through its API, zone by zone. A modeller would spend days on this. The AI does it in minutes, and every change is read back and saved.</p></div>
+    <div class="box"><h3>4 · Check the model</h3><p>Tekla clash check, supports (nothing stops short or floats), double counts, zero-length parts, and a count of every member type against the drawing schedules.</p></div>
+    <div class="box"><h3>5 · Estimator review</h3><p>I review scope, inclusions and exclusions, check the main quantities and turn unclear details into tender clarifications with sheet references.</p></div>
+    <div class="box"><h3>6 · Issue the pack</h3><p>Bill of materials (steel by section, plates by thickness, purlins and bridging by length, HD bolt sets), the IFC model and the query list, all from the same model.</p></div>
+  </div>
+  <div class="split" style="margin-top:22px">
+    <div><h3><span class="tag" style="background:var(--navy)">AI</span>Speed and coverage</h3><ul><li>Reads all sheets, not just the framing plans</li><li>Models thousands of members, plates and cleats</li><li>Tags every member with its drawing reference and status</li><li>Runs the same checks on every job</li></ul></div>
+    <div><h3><span class="tag" style="background:var(--amber)">ME</span>Judgement and accountability</h3><ul><li>Decides what is in scope and what is excluded</li><li>Chooses the pricing basis and allowances</li><li>Raises drawing queries and qualifications</li><li>Signs off the quantities before issue</li></ul></div>
+  </div>
+</div></section>
+
+<section id="judgement"><div class="wrap">
+  <h2>My estimating judgement</h2>
+  <p class="sub">A fast model only helps if the tender basis is right. This is where experience counts.</p>
+  <div class="grid4">
+    <div class="box"><h3>Scope review</h3><p>Read the structure alongside the architecture and the trade interfaces. An unknown quantity is not zero: confirm it, ask for clarification, or qualify it.</p></div>
+    <div class="box"><h3>Estimate build-up</h3><p>Main steel by mass, purlins, girts and bridging by length, plates by thickness, hardware by count. Allowances are shown separately, never hidden in the base quantities.</p></div>
+    <div class="box"><h3>Risks &amp; qualifications</h3><p>Provisional items, assumed plate sizes and missing details are listed against drawing references. Each one becomes a clear tender clarification.</p></div>
+    <div class="box"><h3>Revisions</h3><p>Drawing updates are tracked issue by issue. What changed, where, and by how much, so variations can be priced.</p></div>
+  </div>
+  <div class="check" style="margin-top:28px">
+    <div>
+      <h3 style="color:var(--navy);margin:0 0 8px">Example: check the geometry, protect the take-off</h3>
+      <p style="margin:0 0 10px;color:#3a4856">A visual review found a column that stopped short of the beam it supports. The column top was raised by <b>618 mm</b> and the cap plate contact was checked, with the base unchanged. On its own the gap was small. Repeated across a model, gaps like this under-count steel and misplace connections. Lengths and supports are checked before the material list is used.</p>
+      <p class="note">Recorded geometry correction on a tender model. The revised height is a tender estimate from the PDF drawings, not a fabrication dimension.</p>
+    </div>
+    <div class="svgbox">
+      <svg viewBox="0 0 420 220" width="100%" role="img" aria-label="Before and after: column extended 618 mm to meet the beam">
+        <text x="105" y="18" text-anchor="middle" font-size="12" fill="#5b6b7a" font-weight="700">BEFORE</text>
+        <text x="315" y="18" text-anchor="middle" font-size="12" fill="#5b6b7a" font-weight="700">AFTER REVIEW</text>
+        <rect x="30" y="34" width="150" height="16" fill="#4d8cd9"/><rect x="240" y="34" width="150" height="16" fill="#4d8cd9"/>
+        <rect x="96" y="84" width="18" height="110" fill="#6e7f91"/><rect x="306" y="50" width="18" height="144" fill="#6e7f91"/>
+        <rect x="88" y="194" width="34" height="6" fill="#aab4be"/><rect x="298" y="194" width="34" height="6" fill="#aab4be"/>
+        <line x1="128" y1="52" x2="128" y2="82" stroke="#d6246e" stroke-width="2"/><text x="134" y="72" font-size="12" fill="#d6246e">gap</text>
+        <rect x="300" y="48" width="30" height="4" fill="#e8891c"/><text x="338" y="70" font-size="12" fill="#1c2733">+618 mm</text><text x="338" y="86" font-size="11" fill="#5b6b7a">cap contact checked</text>
+        <text x="105" y="214" text-anchor="middle" font-size="11" fill="#5b6b7a">base unchanged</text><text x="315" y="214" text-anchor="middle" font-size="11" fill="#5b6b7a">base unchanged</text>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
+<section class="alt" id="work"><div class="wrap">
+  <h2>Projects</h2>
+  <p class="sub">Tender models built with this workflow. Open a model in the browser and click a member to see its drawing reference, status, length and levels. Download the bill of materials, or watch the model being built.</p>
+  <div class="grid2">
+    <div class="box case">
+      <h3>Industrial plant, Western Australia</h3>
+      <div><span class="chip">trusses</span><span class="chip">laced columns</span><span class="chip">crane runway</span><span class="chip">walkways</span></div>
+      <p>High-bay workshop with trusses, laced columns, crane runway, monorail support steel, maintenance walkway and a pre-treatment building. 76 drawing sheets.</p>
+      <div class="meta"><b>613 t</b> steel and plates · <b>11.7 km</b> purlins and girts · 12,226 parts</div>
+      <div class="links"><a class="btn sm" href="viewer/index.html?case=plant">Open model</a><a class="btn ghost sm" href="viewer/build.html?case=plant">Watch build</a><a class="btn ghost sm" href="viewer/bom/plant_BOM.xlsx">BOM (Excel)</a></div>
+    </div>
+    <div class="box case">
+      <h3>Warehouse and office, Victoria</h3>
+      <div><span class="chip">portal frames</span><span class="chip">canopies</span><span class="chip">2-storey office</span><span class="chip">detailed connections</span></div>
+      <p>136 m portal-frame warehouse with canopies, two-storey office, dock office and stairs. Detailed model for client viewing: main connections from the engineer's standard details, every purlin cleat on its web, clashes cut to a minimum.</p>
+      <div class="meta"><b>248 t</b> incl. purlins · <b>11.3 km</b> purlins and girts · 8,879 parts</div>
+      <div class="links"><a class="btn sm" href="viewer/index.html?case=warehouse">Open model</a><a class="btn ghost sm" href="viewer/build.html?case=warehouse">Watch build</a><a class="btn ghost sm" href="viewer/bom/warehouse_BOM.xlsx">BOM (Excel)</a></div>
+    </div>
+    <div class="box case">
+      <h3>Haigslea State School, multipurpose community hall, QLD</h3>
+      <div><span class="chip">school hall</span><span class="chip">portal frames</span><span class="chip">awnings</span></div>
+      <p>Steel-framed multipurpose hall with awnings and glazing framing. Items not modelled are counted from the standard details and listed in the BOM.</p>
+      <div class="meta"><b>13.8 t</b> steel and plates · <b>1.1 km</b> purlins and girts · 916 parts</div>
+      <div class="links"><a class="btn sm" href="viewer/index.html?case=haigslea">Open model</a><a class="btn ghost sm" href="viewer/build.html?case=haigslea">Watch build</a><a class="btn ghost sm" href="viewer/bom/haigslea_BOM.xlsx">BOM (Excel)</a></div>
+    </div>
+    <div class="box case">
+      <h3>Retail development, 1051 &amp; 1059 Anzac Avenue, Petrie, QLD</h3>
+      <div><span class="chip">retail</span><span class="chip">shopfront framing</span><span class="chip">no detail sheets</span></div>
+      <p>Retail buildings with shopfront mullions and headers. The tender set had no steel detail sheets, so connections are priced to tender rules and every assumption is raised as a query.</p>
+      <div class="meta"><b>67.7 t</b> steel and plates · <b>0.55 km</b> purlins · 1,312 parts</div>
+      <div class="links"><a class="btn sm" href="viewer/index.html?case=anzac-avenue">Open model</a><a class="btn ghost sm" href="viewer/build.html?case=anzac-avenue">Watch build</a><a class="btn ghost sm" href="viewer/bom/anzac-avenue_BOM.xlsx">BOM (Excel)</a></div>
+    </div>
+    <div class="box case">
+      <h3>University building upgrade, St Lucia, QLD</h3>
+      <div><span class="chip">pump house</span><span class="chip">pipework supports</span></div>
+      <p>Fire pump house and pipework support steel inside an existing warehouse. Model and drawing queries shown; quantities not published.</p>
+      <div class="meta">259 parts · model and queries preview</div>
+      <div class="links"><a class="btn sm" href="viewer/index.html?case=uq-b99">Open model</a></div>
+    </div>
+    <div class="box case">
+      <h3>Earlier work: complex roof and warehouse take-offs</h3>
+      <div><span class="chip">MTO schedules</span><span class="chip">IFC viewer</span></div>
+      <p>Two earlier projects that shaped this workflow, with grouped Excel schedules, quantity summaries and an interactive model.</p>
+      <div class="meta">Separate showcase site</div>
+      <div class="links"><a class="btn ghost sm" href="https://steel-modelling-demo.ruby-luck-6613.chatgpt.site/#explore" target="_blank" rel="noopener">Open the earlier showcase ↗</a></div>
+    </div>
+  </div>
+  <p class="note">Tender quantities only: not for fabrication or procurement. No rates or tender prices are published.</p>
+</div></section>
+
+<section id="detailed"><div class="wrap">
+  <h2>Detailed tender model</h2>
+  <p class="sub">For jobs where the model is shown to the client or carried into detailing, main members are cut to the faces they land on and the main connections are modelled from the engineer's standard details.</p>
+  <div class="grid2 imgs">
+    <div class="box" style="padding:0"><img src="img/all-grid9-eave-C.jpg" alt="Eave connection: rafter end plate on the column with stiffeners"><div class="caption">Eave: end plate, column stiffeners and diagonal stiffener at the thicknesses on the connection details.</div></div>
+    <div class="box" style="padding:0"><img src="img/grid5-truss-E.jpg" alt="Truss chords with splice end plates and webs cut to the chord faces"><div class="caption">Truss: chord splices and webs cut to the chord faces, chord ends plated to the column.</div></div>
+  </div>
+  <div class="grid3" style="margin-top:20px">
+    <div class="box stat"><b>3,016 → 327</b><span>main-member clashes, industrial plant (Tekla clash check)</span></div>
+    <div class="box stat"><b>10,434 → 2,774</b><span>whole-model clashes, warehouse and office</span></div>
+    <div class="box stat"><b>1,310</b><span>connection plates placed as detailed on the plant</span></div>
+  </div>
+</div></section>
+
+<section class="alt" id="about"><div class="wrap">
+  <h2>About</h2>
+  <p class="sub">Who reviews your take-off.</p>
+  <div class="grid2">
+    <div class="box">
+      <h3>Estimating, drafting and project coordination</h3>
+      <p>Estimator and Project Coordinator with a structural steel drafting background and over 9 years of experience across structural steel fabrication, mechanical, construction and mining projects. Master of Mechanical Engineering graduate and Engineers Australia member.</p>
+      <p style="margin-top:10px">Experience includes interpreting tender drawings and specifications, preparing material take-offs (MTOs) and cost estimates, compiling RFQs and evaluating subcontractor and supplier quotations, procuring and scheduling materials, quality documentation, and coordinating projects from tender through fabrication to delivery.</p>
+    </div>
+    <div class="box">
+      <h3>AI-driven modelling in Tekla Structures</h3>
+      <p>I have built an AI-driven workflow that turns tender drawings into a full Tekla Structures model. It handles grids, frames, bracing, purlins, bridging and connection plates, then exports the bill of materials, the IFC model and the query list. The AI does the reading, modelling and checking at speed. I set the rules, review every job and sign off the quantities.</p>
+      <p style="margin-top:10px">The same approach is used for shop-drawing (fabrication) models, where the bar is higher: every bolt, hole and weld must be right.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="quote"><div class="wrap">
+  <h2>Get a quote</h2>
+  <p class="sub">Tell me about the job and send the drawings. The button opens an email in your own mail program with these details filled in. Attach the drawings (or paste a download link) and send.</p>
+  <form action="#quote" method="get" onsubmit="return rsQuote(this)">
+    <div><label for="n">Name</label><input id="n" name="name" required></div>
+    <div><label for="c">Company</label><input id="c" name="company"></div>
+    <div><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+    <div><label for="p">Phone</label><input id="p" name="phone"></div>
+    <div><label for="d">Tender closing date</label><input id="d" name="closing" type="date"></div>
+    <div><label for="t">Approximate size</label><select id="t" name="size"><option>Not sure</option><option>Up to 50 t</option><option>50 to 200 t</option><option>Over 200 t</option></select></div>
+    <div class="full"><label for="m">Project and drawings (a download link is fine)</label><textarea id="m" name="message"></textarea></div>
+    <div class="full"><button class="btn" type="submit">Open email to request a quote</button></div>
+  </form>
+  <p class="note">Or email the drawings straight to <a href="mailto:tf717202165@gmail.com?subject=Steel%20take-off%20quote%20request"><b>tf717202165@gmail.com</b></a></p>
+<script>
+function rsQuote(f) {
+  try {
+    var v = function (n) { return (f.elements[n].value || '').trim(); };
+    var body = ['Name: ' + v('name'), 'Company: ' + v('company'), 'Email: ' + v('email'), 'Phone: ' + v('phone'), 'Tender closing date: ' + v('closing'),
+      'Approximate size: ' + v('size'), '', 'Project and drawings:', v('message'), '', '(Please attach the drawings or paste a download link.)'].join(String.fromCharCode(10));
+    location.href = 'mailto:tf717202165@gmail.com?subject=' + encodeURIComponent('Steel take-off quote request' + (v('company') ? ' - ' + v('company') : '')) + '&body=' + encodeURIComponent(body);
+  } catch (e) { location.href = 'mailto:tf717202165@gmail.com?subject=Steel%20take-off%20quote%20request'; }
+  return false;
+}
+document.querySelectorAll('#demoTabs button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('#demoTabs button').forEach(function (x) { x.classList.toggle('cur', x === b); });
+    document.getElementById('demo').src = 'viewer/build.html?case=' + b.dataset.case + '&embed=1';
+  });
+});
+</script>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b style="color:#fff">RapidSteel MTO</b><br>Steel estimating with AI-driven Tekla modelling · Australia</div>
+  <div>© 2026 RapidSteel MTO</div>
+</div></footer>
+</body>
+</html>
