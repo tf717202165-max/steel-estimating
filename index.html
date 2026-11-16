@@ -55,7 +55,7 @@ footer{background:var(--navy);color:#c9d4de;padding:28px 0;font-size:13.5px}foot
 <body>
 <header><div class="wrap">
   <a class="brand" href="#top">Rapid<span>Steel</span> MTO</a>
-  <nav><a href="#build">Model build</a><a href="#ai">AI workflow</a><a href="#judgement">Estimating</a><a href="#work">Projects</a><a href="#about">About</a><a href="#quote">Get a quote</a></nav>
+  <nav><a href="#build">Model build</a><a href="#ai">AI workflow</a><a href="#judgement">Estimating</a><a href="#work">Projects</a><a href="#about">About</a></nav>
 </div></header>
 
 <div class="hero" id="top"><div class="wrap">
@@ -171,30 +171,7 @@ footer{background:var(--navy);color:#c9d4de;padding:28px 0;font-size:13.5px}foot
   </div>
 </div></section>
 
-<section id="quote"><div class="wrap">
-  <h2>Get a quote</h2>
-  <p class="sub">Tell me about the job and send the drawings. The button opens an email in your own mail program with these details filled in. Attach the drawings (or paste a download link) and send.</p>
-  <form action="#quote" method="get" onsubmit="return rsQuote(this)">
-    <div><label for="n">Name</label><input id="n" name="name" required></div>
-    <div><label for="c">Company</label><input id="c" name="company"></div>
-    <div><label for="e">Email</label><input id="e" name="email" type="email" required></div>
-    <div><label for="p">Phone</label><input id="p" name="phone"></div>
-    <div><label for="d">Tender closing date</label><input id="d" name="closing" type="date"></div>
-    <div><label for="t">Approximate size</label><select id="t" name="size"><option>Not sure</option><option>Up to 50 t</option><option>50 to 200 t</option><option>Over 200 t</option></select></div>
-    <div class="full"><label for="m">Project and drawings (a download link is fine)</label><textarea id="m" name="message"></textarea></div>
-    <div class="full"><button class="btn" type="submit">Open email to request a quote</button></div>
-  </form>
-  <p class="note">Or email the drawings straight to <a href="mailto:tf717202165@gmail.com?subject=Steel%20take-off%20quote%20request"><b>tf717202165@gmail.com</b></a></p>
 <script>
-function rsQuote(f) {
-  try {
-    var v = function (n) { return (f.elements[n].value || '').trim(); };
-    var body = ['Name: ' + v('name'), 'Company: ' + v('company'), 'Email: ' + v('email'), 'Phone: ' + v('phone'), 'Tender closing date: ' + v('closing'),
-      'Approximate size: ' + v('size'), '', 'Project and drawings:', v('message'), '', '(Please attach the drawings or paste a download link.)'].join(String.fromCharCode(10));
-    location.href = 'mailto:tf717202165@gmail.com?subject=' + encodeURIComponent('Steel take-off quote request' + (v('company') ? ' - ' + v('company') : '')) + '&body=' + encodeURIComponent(body);
-  } catch (e) { location.href = 'mailto:tf717202165@gmail.com?subject=Steel%20take-off%20quote%20request'; }
-  return false;
-}
 document.querySelectorAll('#demoTabs button').forEach(function (b) {
   b.addEventListener('click', function () {
     document.querySelectorAll('#demoTabs button').forEach(function (x) { x.classList.toggle('cur', x === b); });
@@ -202,7 +179,6 @@ document.querySelectorAll('#demoTabs button').forEach(function (b) {
   });
 });
 </script>
-</div></section>
 
 <footer><div class="wrap">
   <div><b style="color:#fff">RapidSteel MTO</b><br>Steel estimating with AI-driven Tekla modelling · Australia</div>
