@@ -1,0 +1,548 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>241 James Street Steel Model</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: drafting-paper page, one wide column; numbered sections with mono eyebrows, square cards on thin rules, one ink band for the process. Palette follows the user's portfolio site. */
+:root{
+  --paper:#f3f1ea; --ink:#13262c; --muted:#5a6969; --line:#d2d8d1; --orange:#eeb58c; --teal:#276d66; --card:#ffffff; --band:#13262c; --band-fg:#f3f1ea; --btn:#dce8d7;
+  --sans:Arial,Helvetica,sans-serif; --mono:"Courier New",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#10191c;--ink:#e8ebe4;--muted:#9fb0ae;--line:#2b3a3d;--orange:#e7a97c;--teal:#6fb8ae;--card:#16232700;--band:#0b1214;--band-fg:#e8ebe4;--btn:#1f3a37;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#10191c;--ink:#e8ebe4;--muted:#9fb0ae;--line:#2b3a3d;--orange:#e7a97c;--teal:#6fb8ae;--card:#16232700;--band:#0b1214;--band-fg:#e8ebe4;--btn:#1f3a37;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
+.in{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{border-bottom:1px solid var(--line)}
+.top .in{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:-.5px}
+.brand small{font-family:var(--mono);font-weight:400;font-size:.7rem;letter-spacing:.12em;color:var(--muted);margin-left:8px}
+nav{display:flex;gap:18px;font-size:.85rem;flex-wrap:wrap}
+nav a,a{color:var(--ink)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-weight:500;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,4.4vw,2.6rem);letter-spacing:-1.4px;line-height:1.12}
+h1 .t,h2 .t{color:var(--teal)}
+h2{font-size:clamp(1.6rem,3.4vw,2.1rem);letter-spacing:-1px;line-height:1.15}
+h3{font-size:1.05rem;font-weight:700}
+p{margin:0;max-width:62ch}
+.muted{color:var(--muted)}
+.hero .in{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;padding-block:44px 28px}
+@media (max-width:760px){.hero .in{grid-template-columns:1fr}}
+.hero-l{display:flex;flex-direction:column;gap:18px;min-width:0}
+.hero-r{display:flex;flex-direction:column;gap:14px;font-size:.95rem;min-width:0}
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (max-width:560px){.ctas{grid-template-columns:1fr}}
+.cta{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 4px;font-size:.9rem;text-decoration:none;border:0;background:none;color:var(--ink);font-family:var(--sans);cursor:pointer;text-align:left}
+.cta + .cta{border-left:1px solid var(--line);padding-left:16px}
+@media (max-width:560px){.cta + .cta{border-left:0;border-top:1px solid var(--line);padding-left:4px}}
+.cta .n{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-right:10px}
+.cta:hover,.cta:focus-visible{background:var(--btn);outline:none}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:16px 4px;display:flex;flex-direction:column;gap:2px}
+.stat b{font-size:1.5rem;font-weight:500;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.stat span{font-size:.8rem;color:var(--muted)}
+.band{background:var(--band);color:var(--band-fg)}
+.band .in{display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding-block:0}
+@media (max-width:760px){.band .in{grid-template-columns:1fr}}
+.step{padding:18px 10px;font-size:.88rem;display:flex;align-items:center;gap:10px}
+.step + .step{border-left:1px solid #ffffff22}
+@media (max-width:760px){.step + .step{border-left:0;border-top:1px solid #ffffff22}}
+.step i{font-style:normal;font-family:var(--mono);font-size:.7rem;color:var(--orange)}
+section .in{display:flex;flex-direction:column;gap:22px;padding-block:52px}
+section + section .in{border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end}
+@media (max-width:760px){.head{grid-template-columns:1fr}}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card .n{font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+.card p{font-size:.9rem}
+.card .k{font-family:var(--mono);font-size:.72rem;color:var(--teal);letter-spacing:.04em}
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-weight:400;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.figs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:900px){.figs{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.figs{grid-template-columns:1fr}}
+figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+figure img{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line);background:var(--card)}
+figcaption{font-size:.82rem;color:var(--muted)}
+figcaption b{color:var(--ink);font-weight:700;display:block;font-size:.85rem}
+.dl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+@media (max-width:760px){.dl{grid-template-columns:1fr}}
+.dl > div{padding:18px;display:flex;flex-direction:column;gap:10px;background:var(--card);min-width:0}
+.dl > div + div{border-left:1px solid var(--line)}
+@media (max-width:760px){.dl > div + div{border-left:0;border-top:1px solid var(--line)}}
+.btn{align-self:flex-start;display:inline-flex;gap:10px;align-items:center;padding:9px 14px;background:var(--btn);color:var(--ink);border:1px solid #728f90;border-radius:0;font-family:var(--sans);font-size:.88rem;cursor:pointer;text-decoration:none}
+.btn:hover,.btn:focus-visible{outline:2px solid var(--teal);outline-offset:1px}
+.btn[disabled]{opacity:.55;cursor:default}
+.msg{font-size:.8rem;color:var(--muted);min-height:1.2em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.two > div{padding:18px;background:var(--card);display:flex;flex-direction:column;gap:10px}
+.two > div + div{border-left:1px solid var(--line)}
+@media (max-width:760px){.two > div + div{border-left:0;border-top:1px solid var(--line)}}
+.two ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:.9rem}
+footer .in{padding-block:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+.files-band{background:var(--band);color:var(--band-fg)}
+.files-band .in{border-top:0!important}
+.files-band .eyebrow,.files-band .muted{color:#c9d3cf}
+.files-band h2 .t{color:var(--orange)}
+.files-band .dl{border-color:#ffffff33}
+.files-band .dl > div{background:transparent}
+.files-band .dl > div + div{border-color:#ffffff33}
+.files-band .dl h3{color:var(--band-fg);font-size:1.2rem}
+.files-band .btn{background:var(--orange);color:#13262c;border-color:var(--orange);font-weight:700;font-size:1rem;padding:12px 18px}
+.files-band .btn:hover,.files-band .btn:focus-visible{outline:2px solid var(--band-fg)}
+.files-band .msg{color:#c9d3cf}
+</style>
+
+<div class="top"><div class="in">
+  <div class="brand">241 James St <small>AI-ASSISTED STEEL MODEL</small></div>
+  <nav><a href="#files"><b>Downloads</b></a><a href="#viewer">3D model</a><a href="#accuracy">Accuracy</a><a href="#efficiency">Efficiency</a><a href="#model">Model</a><a href="#files">Files</a></nav>
+</div></div>
+
+<header class="hero"><div class="in">
+  <div class="hero-l">
+    <span class="eyebrow">241–243 James Street, Toowoomba · Tekla Structures 2025</span>
+    <h1>Read the drawings.<br>Build the steel.<br><span class="t">Record every decision.</span></h1>
+    <div class="ctas">
+      <a class="cta" href="#files"><span><span class="n">01</span>Download the IFC model</span><span>↘</span></a>
+      <a class="cta" href="#files"><span><span class="n">02</span>Open the RFI pack</span><span>↘</span></a>
+    </div>
+  </div>
+  <div class="hero-r">
+    <p>A complete steel model built from the tender drawings with an AI assistant, from an empty grid to a checked model in about 14 hours of work.</p>
+    <p class="muted">Structural: Olivotto &amp; Young Consulting 26430, S00.00–S06.03. Architectural: Struxi Design 252232, WD 000–N01. Every place the model departs from the drawings is a logged decision; every open question is an RFI with a proposal.</p>
+  </div>
+</div></header>
+
+<div class="in"><div class="stats">
+  <div class="stat"><b>3,926</b><span>parts modelled</span></div>
+  <div class="stat"><b>3,506</b><span>bolt groups</span></div>
+  <div class="stat"><b>1,813</b><span>weld objects</span></div>
+  <div class="stat"><b>~71 t</b><span>steel, part weights (estimate)</span></div>
+</div></div>
+
+<div class="band" style="margin-top:28px"><div class="in">
+  <div class="step"><i>01</i>Read &amp; register drawings</div>
+  <div class="step"><i>02</i>Grid &amp; main members</div>
+  <div class="step"><i>03</i>Connections &amp; details</div>
+  <div class="step"><i>04</i>Check &amp; fix</div>
+  <div class="step"><i>05</i>RFIs &amp; IFC</div>
+</div></div>
+
+<section id="glance"><div class="in">
+  <div class="head">
+    <div><span class="eyebrow">00 / At a glance</span><h2>14 hours.<br><span class="t">One checked model.</span></h2></div>
+    <p class="muted">What the AI-assisted workflow delivered on this job, and where it stands now.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="k">TIME</span><h3>About 14 hours of work</h3><p>From an empty Tekla grid to a full, checked steel model with connections, welds and attributes.</p></div>
+    <div class="card"><span class="k">ACCURACY</span><h3>Drawing-driven, then checked</h3><p>Built from the engineer's details. Clash, gap, weld and attribute checks on the whole model; 0 open real clashes; every deviation logged with the reason.</p></div>
+    <div class="card"><span class="k">EFFICIENCY</span><h3>Parallel work, verified writes</h3><p>Drawing reading, checks and RFI drafting run alongside the modelling. Each change is trial-run, read back and saved, so nothing is left half-done.</p></div>
+    <div class="card"><span class="k">INFORMATION</span><h3>Data in the model</h3><p>Names, profiles, grades, finish, tags, bolts and welds carried into the IFC, ready for review in any IFC viewer.</p></div>
+    <div class="card"><span class="k">TRACKING</span><h3>Nothing undocumented</h3><p>185 logged decisions, a timed work log and check reports: every change can be traced and undone.</p></div>
+    <div class="card"><span class="k">NEXT</span><h3>Ready once the RFIs close</h3><p>16 RFIs are with proposals. Once they are confirmed, the model is updated, the final IFC is issued and shop drawings can start.</p></div>
+  </div>
+</div></section>
+
+<section id="files" class="files-band"><div class="in">
+  <div class="head">
+    <div><span class="eyebrow">01 / Files</span><h2>Download the model <span class="t">and the RFIs.</span></h2></div>
+    <p class="muted">The IFC carries member names, profiles, materials, finish and tags, bolts, and welds as objects with type, size and shop/site.</p>
+  </div>
+  <div class="dl">
+    <div><span class="eyebrow">IFC4 · 6.6 MB</span><h3>Steel model</h3><p class="muted">1,678 beams, 398 columns, 1,662 plates, 167 members, 3,506 bolt groups, 1,761 welds.</p><a class="btn" href="files/241-JAMES-steel.ifc" download>Download IFC ↓</a><span class="msg" id="msg-ifc"></span></div>
+    <div><span class="eyebrow">Word · 30 pages</span><h3>RFI pack</h3><p class="muted">16 RFIs, each with red-boxed drawing crops and Proposal A / B.</p><a class="btn" href="files/RFI-pack-241-JAMES.docx" download>Download RFI pack ↓</a><span class="msg" id="msg-rfi"></span></div>
+    <div><span class="eyebrow">Web page</span><h3>RFI pack online</h3><p class="muted">The same 16 RFIs to read in the browser.</p><a class="btn" href="rfi.html">Open RFI pack ↗</a></div>
+  </div>
+</div></section>
+
+<section id="scope"><div class="in">
+  <div class="head">
+    <div><span class="eyebrow">02 / Scope</span><h2>What is in the model.</h2></div>
+    <p class="muted">Members, connections, holes, welds and attributes to shop-drawing depth. Purchased items (bridging, rod-end kits, taper washers) are modelled as parts so they count and clash.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="n">01</span><h3>Main roof</h3><p>610UB portal rafters on 5 frames, haunches, apex splices with 16-M30 end plates, field splices.</p></div>
+    <div class="card"><span class="n">02</span><h3>Purlins &amp; bracing</h3><p>249 Z/C purlins with laps and cleats, 466 bridging, brace angles, SHS struts, 128 fly braces, hook rods controlling brace sag.</p></div>
+    <div class="card"><span class="n">03</span><h3>Trusses</h3><p>TR1 in three transport pieces, TR2 ×5, TR3 — 67 members, shop-welded.</p></div>
+    <div class="card"><span class="n">04</span><h3>Mezzanine &amp; stair</h3><p>28 SHS columns, beams, 195 floor joists, landing, stringers with base plates and cast-in anchors.</p></div>
+    <div class="card"><span class="n">05</span><h3>Wall-panel connections</h3><p>About 130 cast-in ferrule bolt groups with blind holes in the tilt panels, embed plates, panel clips, mid-span weld plates.</p></div>
+    <div class="card"><span class="n">06</span><h3>Awnings &amp; hold-downs</h3><p>Three awnings with moment end plates to detail 7A; 112 cogged hold-down rods with templates, nuts and washers.</p></div>
+  </div>
+</div></section>
+
+<section id="accuracy"><div class="in">
+  <div class="head">
+    <div><span class="eyebrow">03 / Accuracy</span><h2>Checked, not assumed.</h2></div>
+    <p class="muted">Each check ran on the whole model after each batch of changes. Findings were sorted into classes; the detailer accepted or rejected each class.</p>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Check</th><th>Scope</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Tekla native clash</td><td>Whole model, 927 events</td><td>0 open real clashes. All events are bolts into their own ferrules, hold-down rods in templates, hook rods in purlin slots, or bolt space confirmed by a solid check.</td></tr>
+      <tr><td>Gap check</td><td>2,136 bolt groups, 1,806 welds</td><td>135 findings → 62 real fixed (5° taper packer, stray weld, 66 cleats seated) → 71 left, all accepted design classes. Method proven against Tekla's grip length on all 2,136 groups.</td></tr>
+      <tr><td>Weld check</td><td>1,799 weld objects vs details 2A, S04.10–13, note S9</td><td>212 corrected, 86 changed after a decision, 12 raised as RFI.</td></tr>
+      <tr><td>Attributes</td><td>3,926 parts</td><td>Name, profile, material, class on every part. Finish HDG on 2,932 parts; 932 cold-formed (pre-galvanised) kept apart.</td></tr>
+      <tr><td>Bolt installation space</td><td>Joist end cleats</td><td>11 joists moved clear of the beams so every bolt has socket room.</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="efficiency"><div class="in">
+  <div class="head">
+    <div><span class="eyebrow">04 / Efficiency</span><h2>Many checks in parallel.<br><span class="t">One write at a time.</span></h2></div>
+    <p class="muted">The model is changed by small single-purpose scripts. Reading drawings, checking and drafting RFIs run in the background while the model is written one change at a time.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="k">~14 H</span><h3>Empty grid to checked model</h3><p>Modelling and checking time for the whole steel package.</p></div>
+    <div class="card"><span class="k">TRIAL → WRITE → READ BACK</span><h3>Every change verified</h3><p>Each script runs a dry run first, reads its result back, then saves. A failed write rolls back and is logged.</p></div>
+    <div class="card"><span class="k">SAMPLE FIRST</span><h3>One, then the batch</h3><p>Repeated changes are shown on one sample in Tekla before they are applied to the rest.</p></div>
+  </div>
+</div></section>
+
+<!-- 3D preview section. Paste into index.html (after #model). Needs files/model-preview.json (written by writers\export-preview-geometry.v1.ps1).
+     Loads three.js r128 + OrbitControls r128 from the CDN when the section comes near the viewport; no other external fetch. -->
+<section id="viewer"><div class="in">
+<style>
+#viewer{--pv-c0:#13262c;--pv-c1:#276d66;--pv-c2:#9a5b2a;--pv-c3:#de935a;--pv-c4:#4e6b72;--pv-c5:#a3afab;--pv-c6:#53a093;--pv-c7:#8c8172;--pv-hi:#c2185b;--pv-grid:#c3cbc3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) #viewer{--pv-c0:#e8ebe4;--pv-c1:#6fb8ae;--pv-c2:#d79a63;--pv-c3:#e7a97c;--pv-c4:#93aeb3;--pv-c5:#6f817d;--pv-c6:#a6d8cf;--pv-c7:#a89c8d;--pv-hi:#ff6fa5;--pv-grid:#2b3a3d}}
+:root[data-theme="dark"] #viewer{--pv-c0:#e8ebe4;--pv-c1:#6fb8ae;--pv-c2:#d79a63;--pv-c3:#e7a97c;--pv-c4:#93aeb3;--pv-c5:#6f817d;--pv-c6:#a6d8cf;--pv-c7:#a89c8d;--pv-hi:#ff6fa5;--pv-grid:#2b3a3d}
+.pv{display:flex;flex-direction:column;gap:0;min-width:0}
+.pv-stage{position:relative;width:100%;aspect-ratio:16/9;max-height:70vh;min-height:260px;border:1px solid var(--line);background:var(--card);overflow:hidden}
+.pv-stage canvas{display:block;width:100%;height:100%;outline:none;cursor:grab}
+.pv-stage canvas:active{cursor:grabbing}
+.pv-msg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);pointer-events:none}
+.pv-msg[hidden]{display:none}
+.pv-bar{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.pv-layers{display:flex;flex-wrap:wrap;gap:6px;min-width:0}
+.pv-tools{display:flex;gap:6px;flex-wrap:wrap}
+.pv-chip,.pv-btn{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--line);border-radius:0;background:var(--card);color:var(--ink);font-family:var(--sans);font-size:.8rem;cursor:pointer;line-height:1.3}
+.pv-btn{background:var(--btn);border-color:#728f90}
+.pv-chip:hover,.pv-chip:focus-visible,.pv-btn:hover,.pv-btn:focus-visible{outline:2px solid var(--teal);outline-offset:1px}
+.pv-chip i{width:10px;height:10px;display:inline-block;border:1px solid currentColor;flex:none}
+.pv-chip b{font-family:var(--mono);font-weight:400;font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.pv-chip[aria-pressed="false"]{color:var(--muted);background:transparent}
+.pv-chip[aria-pressed="false"] i{background:transparent!important}
+.pv-btn[disabled],.pv-chip[disabled]{opacity:.55;cursor:default}
+.pv-info{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line);font-size:.88rem;min-height:2.6em}
+.pv-info b{font-weight:700}
+.pv-info .k{font-family:var(--mono);font-size:.72rem;color:var(--teal);letter-spacing:.04em}
+.pv-status{padding-top:8px}
+.pv:fullscreen{background:var(--paper);padding:16px;display:flex;flex-direction:column}
+.pv:fullscreen .pv-stage{flex:1;aspect-ratio:auto;max-height:none}
+.pv:-webkit-full-screen{background:var(--paper);padding:16px;display:flex;flex-direction:column}
+.pv:-webkit-full-screen .pv-stage{flex:1;aspect-ratio:auto;max-height:none}
+</style>
+  <div class="head">
+    <div><span class="eyebrow">05 / 3D model</span><h2>Walk around the model.</h2></div>
+    <p class="muted">Every steel part from the Tekla model, simplified for the browser: holes, bolts and welds are left out. Drag to orbit, right-drag or two fingers to pan, scroll or pinch to zoom. Click a part to see its tag.</p>
+  </div>
+  <div class="pv" id="pv" data-src="files/model-preview.json">
+    <div class="pv-stage" id="pv-stage">
+      <canvas id="pv-canvas" role="img" aria-label="Interactive 3D preview of the steel model" tabindex="0"></canvas>
+      <div class="pv-msg" id="pv-msg">3D preview · loads when you scroll here</div>
+    </div>
+    <div class="pv-bar">
+      <div class="pv-layers" id="pv-layers" role="group" aria-label="Show or hide layers"></div>
+      <div class="pv-tools">
+        <button class="pv-btn" type="button" id="pv-reset" disabled>Reset view ↺</button>
+        <button class="pv-btn" type="button" id="pv-full">Expand ⛶</button>
+      </div>
+    </div>
+    <div class="pv-info" id="pv-info" aria-live="polite"><span class="eyebrow">Part</span><span id="pv-info-t" class="muted">Click a part to see its tag, name and profile.</span></div>
+    <div class="msg pv-status" id="pv-status">Loading model…</div>
+  </div>
+<script>
+(function(){
+  var THREE_URL = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+  var ORBIT_URL = "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js";
+  var root = document.getElementById("pv"), sec = document.getElementById("viewer");
+  var stage = document.getElementById("pv-stage"), canvas = document.getElementById("pv-canvas");
+  var msg = document.getElementById("pv-msg"), status = document.getElementById("pv-status");
+  var layersEl = document.getElementById("pv-layers"), infoT = document.getElementById("pv-info-t");
+  var btnReset = document.getElementById("pv-reset"), btnFull = document.getElementById("pv-full");
+  var started = false;
+
+  function fail(why){
+    msg.hidden = false; msg.textContent = "Preview could not load";
+    status.textContent = "";
+    status.appendChild(document.createTextNode("Preview could not load - "));
+    var a = document.createElement("a"); a.href = "#files"; a.textContent = "download the IFC below"; status.appendChild(a);
+    status.appendChild(document.createTextNode("."));
+    if (window.console && why) console.warn("3D preview:", why);
+  }
+  function loadScript(src){
+    return new Promise(function(res, rej){
+      var s = document.createElement("script"); s.src = src; s.async = false;
+      s.onload = function(){ res(); }; s.onerror = function(){ rej(new Error("script " + src)); };
+      document.head.appendChild(s);
+    });
+  }
+  function fmt(n){ return n.toLocaleString("en-AU"); }
+  function cssVar(name){ return getComputedStyle(sec).getPropertyValue(name).trim() || "#888888"; }
+
+  function fetchModel(url){
+    return fetch(url).then(function(r){
+      if (!r.ok) throw new Error("fetch " + r.status);
+      var total = +r.headers.get("content-length") || 0;
+      if (!r.body || !r.body.getReader || !window.TextDecoder) return r.text();
+      var reader = r.body.getReader(), dec = new TextDecoder(), parts = [], got = 0;
+      function pump(){
+        return reader.read().then(function(x){
+          if (x.done) { parts.push(dec.decode()); return parts.join(""); }
+          got += x.value.length; parts.push(dec.decode(x.value, {stream: true}));
+          status.textContent = "Loading model… " + (got / 1048576).toFixed(1) + (total ? " of " + (total / 1048576).toFixed(1) : "") + " MB";
+          return pump();
+        });
+      }
+      return pump();
+    }).then(function(t){ return JSON.parse(t); });
+  }
+
+  function start(){
+    if (started) return; started = true;
+    msg.textContent = "Loading 3D preview…"; status.textContent = "Loading model…";
+    var libs = (window.THREE && window.THREE.OrbitControls) ? Promise.resolve()
+      : (window.THREE ? Promise.resolve() : loadScript(THREE_URL)).then(function(){ return window.THREE.OrbitControls ? null : loadScript(ORBIT_URL); });
+    Promise.all([libs, fetchModel(root.getAttribute("data-src"))]).then(function(r){
+      if (!window.THREE || !THREE.OrbitControls) throw new Error("three.js did not load");
+      status.textContent = "Building the scene…";
+      setTimeout(function(){ try { build(r[1]); } catch (e) { fail(e); } }, 20);
+    }).catch(fail);
+  }
+
+  function build(data){
+    var T = THREE, L = data.layers.length, parts = data.parts || [];
+    if (!parts.length) throw new Error("no parts");
+    // pass 1: sizes per layer
+    var nv = [], nt = [], np = [], k, l;
+    for (l = 0; l < L; l++) { nv.push(0); nt.push(0); np.push(0); }
+    for (k = 0; k < parts.length; k++) { var p = parts[k]; nv[p.l] += p.v.length / 3; nt[p.l] += p.i.length / 3; np[p.l]++; }
+    // renderer first: no WebGL = clean failure
+    var renderer;
+    try { renderer = new T.WebGLRenderer({canvas: canvas, antialias: true, alpha: true}); }
+    catch (e) { throw new Error("WebGL not available"); }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setClearColor(0x000000, 0);
+    var scene = new T.Scene(), group = new T.Group(); scene.add(group);
+    var hemi = new T.HemisphereLight(0xffffff, 0x8a8f88, 0.85); scene.add(hemi);
+    var sun = new T.DirectionalLight(0xffffff, 0.75); scene.add(sun);
+    var meshes = [], partRef = new Array(parts.length), mats = [];
+    for (l = 0; l < L; l++) {
+      if (!nt[l]) { meshes.push(null); mats.push(null); continue; }
+      var pos = new Float32Array(nv[l] * 3), idx = (nv[l] > 65535) ? new Uint32Array(nt[l] * 3) : new Uint16Array(nt[l] * 3);
+      var triPart = new Int32Array(nt[l]), vo = 0, to = 0;
+      for (k = 0; k < parts.length; k++) {
+        var q = parts[k]; if (q.l !== l) continue;
+        var ox = q.o[0], oy = q.o[1], oz = q.o[2], v = q.v, ii = q.i, base = vo / 3, j;
+        // Tekla Z-up (x, y, z) mm -> three Y-up (x, z, -y) m
+        for (j = 0; j < v.length; j += 3) { pos[vo++] = (ox + v[j]) / 1000; pos[vo++] = (oz + v[j + 2]) / 1000; pos[vo++] = -(oy + v[j + 1]) / 1000; }
+        var t0 = to / 3;
+        for (j = 0; j < ii.length; j++) idx[to++] = ii[j] + base;
+        var tn = ii.length / 3;
+        for (j = 0; j < tn; j++) triPart[t0 + j] = k;
+        partRef[k] = {l: l, t0: t0, tn: tn};
+      }
+      var g = new T.BufferGeometry();
+      g.setAttribute("position", new T.BufferAttribute(pos, 3));
+      g.setIndex(new T.BufferAttribute(idx, 1));
+      g.computeBoundingBox(); g.computeBoundingSphere();
+      var m = new T.MeshStandardMaterial({color: 0x888888, flatShading: true, side: T.DoubleSide, roughness: 0.8, metalness: 0.05});
+      var mesh = new T.Mesh(g, m); mesh.userData.triPart = triPart; mesh.userData.layer = l;
+      group.add(mesh); meshes.push(mesh); mats.push(m);
+    }
+    // Tekla Z absolute = three y (ground at y 0); centre in plan
+    var org = data.origin || [0, 0, 0];
+    var box = new T.Box3().setFromObject(group), c = new T.Vector3(); box.getCenter(c);
+    group.position.set(-c.x, org[2] / 1000, -c.z);
+    box = new T.Box3().setFromObject(group);
+    var sph = box.getBoundingSphere(new T.Sphere()), R = Math.max(sph.radius, 1);
+    var size = new T.Vector3(); box.getSize(size);
+    var gs = Math.max(6, Math.ceil(Math.max(size.x, size.z) * 1.3 / 6) * 6);
+    var grid = new T.GridHelper(gs, gs / 6, 0xffffff, 0xffffff); grid.material.transparent = true; grid.material.opacity = 0.7; scene.add(grid);
+    sun.position.set(-R * 0.8, R * 1.6, R * 1.1);
+
+    var camera = new T.PerspectiveCamera(40, 16 / 9, Math.max(R / 500, 0.02), R * 20);
+    var dist = R / Math.sin(T.MathUtils.degToRad(20)) * 0.8;
+    var home = {pos: new T.Vector3(-0.62, 0.48, 0.62).normalize().multiplyScalar(dist).add(sph.center), target: sph.center.clone()};
+    camera.position.copy(home.pos);
+    var controls = new T.OrbitControls(camera, canvas);
+    controls.target.copy(home.target); controls.enableDamping = true; controls.dampingFactor = 0.12;
+    controls.screenSpacePanning = true; controls.maxDistance = R * 8; controls.minDistance = 0.3;
+    controls.update();
+
+    // highlight = same buffers, draw range of the picked part
+    var hiMat = new T.MeshBasicMaterial({color: 0xff8800, side: T.DoubleSide, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2});
+    var hiMesh = null;
+
+    function recolor(){
+      for (var i = 0; i < L; i++) if (mats[i]) mats[i].color.set(cssVar("--pv-c" + (i % 8)));
+      hiMat.color.set(cssVar("--pv-hi"));
+      grid.material.color.set(cssVar("--pv-grid"));
+      var sw = layersEl.querySelectorAll("i[data-l]");
+      for (var s = 0; s < sw.length; s++) sw[s].style.background = "var(--pv-c" + (+sw[s].getAttribute("data-l") % 8) + ")";
+      req();
+    }
+
+    var pending = false;
+    function req(){ if (!pending) { pending = true; requestAnimationFrame(frame); } }
+    function frame(){ pending = false; controls.update(); renderer.render(scene, camera); }
+    controls.addEventListener("change", req);
+
+    function resize(){
+      var w = stage.clientWidth, h = stage.clientHeight; if (!w || !h) return;
+      renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); req();
+    }
+    if (window.ResizeObserver) new ResizeObserver(resize).observe(stage); else window.addEventListener("resize", resize);
+    resize();
+
+    // layer toggles
+    layersEl.textContent = "";
+    var shown = 0, tris = 0;
+    for (l = 0; l < L; l++) {
+      if (!meshes[l]) continue;
+      shown += np[l]; tris += nt[l];
+      (function(li){
+        var b = document.createElement("button"); b.type = "button"; b.className = "pv-chip"; b.setAttribute("aria-pressed", "true");
+        var sw = document.createElement("i"); sw.setAttribute("data-l", li); b.appendChild(sw);
+        b.appendChild(document.createTextNode(data.layers[li] + " "));
+        var cnt = document.createElement("b"); cnt.textContent = fmt(np[li]); b.appendChild(cnt);
+        b.addEventListener("click", function(){
+          var on = b.getAttribute("aria-pressed") !== "true";
+          b.setAttribute("aria-pressed", on ? "true" : "false"); meshes[li].visible = on;
+          if (!on && hiMesh && hiMesh.userData.layer === li) clearPick();
+          req();
+        });
+        layersEl.appendChild(b);
+      })(l);
+    }
+    recolor();
+
+    // picking: click (not drag) -> raycast the visible layer meshes -> faceIndex -> part
+    var ray = new T.Raycaster(), ndc = new T.Vector2(), down = null;
+    function clearPick(){
+      if (hiMesh) { group.remove(hiMesh); hiMesh.geometry.dispose(); hiMesh = null; }
+      infoT.className = "muted"; infoT.textContent = "Click a part to see its tag, name and profile."; req();
+    }
+    function showPick(pi){
+      var p = parts[pi], ref = partRef[pi]; if (!p || !ref) return;
+      if (hiMesh) { group.remove(hiMesh); hiMesh.geometry.dispose(); }
+      var src = meshes[ref.l].geometry, hg = new T.BufferGeometry();
+      hg.setAttribute("position", src.getAttribute("position")); hg.setIndex(src.getIndex());
+      hg.setDrawRange(ref.t0 * 3, ref.tn * 3);
+      hiMesh = new T.Mesh(hg, hiMat); hiMesh.userData.layer = ref.l; hiMesh.raycast = function(){}; group.add(hiMesh);
+      infoT.className = ""; infoT.textContent = "";
+      var tg = document.createElement("b"); tg.textContent = p.t || "(no tag)"; infoT.appendChild(tg);
+      infoT.appendChild(document.createTextNode(" · " + (p.n || "") + " · "));
+      var pf = document.createElement("span"); pf.className = "k"; pf.textContent = p.p || ""; infoT.appendChild(pf);
+      infoT.appendChild(document.createTextNode(" · " + data.layers[p.l]));
+      req();
+    }
+    canvas.addEventListener("pointerdown", function(e){ down = {x: e.clientX, y: e.clientY}; });
+    canvas.addEventListener("pointerup", function(e){
+      if (!down || Math.abs(e.clientX - down.x) + Math.abs(e.clientY - down.y) > 6) { down = null; return; }
+      down = null;
+      var rc = canvas.getBoundingClientRect();
+      ndc.set(((e.clientX - rc.left) / rc.width) * 2 - 1, -((e.clientY - rc.top) / rc.height) * 2 + 1);
+      ray.setFromCamera(ndc, camera);
+      var vis = []; for (var i = 0; i < meshes.length; i++) if (meshes[i] && meshes[i].visible) vis.push(meshes[i]);
+      var hit = ray.intersectObjects(vis, false);
+      if (hit.length && hit[0].faceIndex != null) showPick(hit[0].object.userData.triPart[hit[0].faceIndex]); else clearPick();
+    });
+    canvas.addEventListener("keydown", function(e){ if (e.key === "Escape") clearPick(); });
+
+    btnReset.disabled = false;
+    btnReset.addEventListener("click", function(){
+      camera.position.copy(home.pos); controls.target.copy(home.target); controls.update(); req();
+    });
+
+    // theme changes
+    var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+    if (mq) { if (mq.addEventListener) mq.addEventListener("change", recolor); else if (mq.addListener) mq.addListener(recolor); }
+    if (window.MutationObserver) new MutationObserver(recolor).observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme", "class"]});
+
+    msg.hidden = true;
+    var dropped = data.dropped ? " (" + fmt(data.dropped) + " small fittings left out)" : "";
+    status.textContent = fmt(shown) + " parts · " + fmt(tris) + " triangles" + dropped + " · drag to orbit, scroll to zoom";
+    req();
+  }
+
+  // full screen (optional; iframes may refuse it)
+  var fsReq = root.requestFullscreen || root.webkitRequestFullscreen;
+  if (!fsReq) btnFull.hidden = true;
+  btnFull.addEventListener("click", function(){
+    var fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+    try {
+      if (fsEl) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+      var pr = fsReq.call(root);
+      if (pr && pr.catch) pr.catch(function(){ status.textContent = "Full screen is not available in this view."; });
+    } catch (e) { status.textContent = "Full screen is not available in this view."; }
+  });
+  function fsChange(){ var on = !!(document.fullscreenElement || document.webkitFullscreenElement); btnFull.textContent = on ? "Close ⛶" : "Expand ⛶"; }
+  document.addEventListener("fullscreenchange", fsChange); document.addEventListener("webkitfullscreenchange", fsChange);
+
+  // load when the section comes near the viewport
+  if (window.IntersectionObserver) {
+    var io = new IntersectionObserver(function(en){ for (var i = 0; i < en.length; i++) if (en[i].isIntersecting) { io.disconnect(); start(); return; } }, {rootMargin: "400px 0px"});
+    io.observe(sec);
+  } else start();
+})();
+</script>
+</div></section>
+
+
+<section id="model"><div class="in">
+  <div class="head">
+    <div><span class="eyebrow">06 / Details</span><h2>Details from the model.</h2></div>
+    <p class="muted">Screenshots from Tekla. The IFC below opens in any IFC viewer, including Trimble Connect.</p>
+  </div>
+  <div class="figs">
+    <figure><img src="img/ridge.jpg" alt="Main roof at the ridge" loading="lazy"><figcaption><b>Main roof at the ridge</b>Rafters, purlins with cleats, bracing, site-welded ridge node.</figcaption></figure>
+    <figure><img src="img/bracing.jpg" alt="Roof bracing node" loading="lazy"><figcaption><b>Roof bracing</b>Node plate, struts and a hook rod controlling brace sag.</figcaption></figure>
+    <figure><img src="img/node.jpg" alt="Symmetric brace node" loading="lazy"><figcaption><b>Brace node</b>Node plate set symmetric about the strut.</figcaption></figure>
+    <figure><img src="img/ferrule.jpg" alt="Bearing channel" loading="lazy"><figcaption><b>Wall-panel bearing</b>Channel on cast-in ferrule bolts with a 5° taper packer.</figcaption></figure>
+    <figure><img src="img/awning.jpg" alt="Awning end plate" loading="lazy"><figcaption><b>Awning moment end plate</b>Detail 7A: end plate, gusset, 4-M20 ferrules.</figcaption></figure>
+    <figure><img src="img/weld.jpg" alt="Weld check evidence" loading="lazy"><figcaption><b>Weld check</b>Apex splice detail 2A against the model.</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="tracking"><div class="in">
+  <div class="head">
+    <div><span class="eyebrow">07 / Tracking</span><h2>Every decision has a source.</h2></div>
+    <p class="muted">The detailer decides; the assistant records, checks and proposes.</p>
+  </div>
+  <div class="two">
+    <div><span class="eyebrow">AI assistant</span><ul>
+      <li>Read the drawing set, extracted schedules and details</li>
+      <li>Wrote and ran the modelling scripts with dry runs and read-back</li>
+      <li>Ran clash, gap, weld and attribute checks; sorted findings with fixes</li>
+      <li>Drafted RFIs with drawing crops and proposals</li>
+      <li>Kept the decision log, work log and check reports</li>
+    </ul></div>
+    <div><span class="eyebrow">Detailer</span><ul>
+      <li>Approved grid and main member positions</li>
+      <li>Made 185 logged decisions: which detail, where to deviate, what to accept</li>
+      <li>Accepted or rejected each class of check findings</li>
+      <li>Chose the 16 RFIs to send and the proposal the model follows</li>
+      <li>Checked samples in Tekla and fixed some items by hand</li>
+    </ul></div>
+  </div>
+</div></section>
+
+
+
+<footer><div class="in">
+  <span>241–243 James Street, Toowoomba · structural steel model · 25 Nov 2026</span>
+  <a href="#scope">Back to top ↑</a>
+</div></footer>
+
+
+</body></html>
