@@ -212,9 +212,9 @@ footer .in{padding-block:28px;border-top:1px solid var(--line);display:flex;just
      Loads three.js r128 + OrbitControls r128 from the CDN when the section comes near the viewport; no other external fetch. -->
 <section id="viewer"><div class="in">
 <style>
-#viewer{--pv-c0:#13262c;--pv-c1:#276d66;--pv-c2:#9a5b2a;--pv-c3:#de935a;--pv-c4:#4e6b72;--pv-c5:#a3afab;--pv-c6:#53a093;--pv-c7:#8c8172;--pv-hi:#c2185b;--pv-grid:#c3cbc3}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) #viewer{--pv-c0:#e8ebe4;--pv-c1:#6fb8ae;--pv-c2:#d79a63;--pv-c3:#e7a97c;--pv-c4:#93aeb3;--pv-c5:#6f817d;--pv-c6:#a6d8cf;--pv-c7:#a89c8d;--pv-hi:#ff6fa5;--pv-grid:#2b3a3d}}
-:root[data-theme="dark"] #viewer{--pv-c0:#e8ebe4;--pv-c1:#6fb8ae;--pv-c2:#d79a63;--pv-c3:#e7a97c;--pv-c4:#93aeb3;--pv-c5:#6f817d;--pv-c6:#a6d8cf;--pv-c7:#a89c8d;--pv-hi:#ff6fa5;--pv-grid:#2b3a3d}
+#viewer{--pv-c0:#13262c;--pv-c1:#276d66;--pv-c2:#9a5b2a;--pv-c3:#de935a;--pv-c4:#4e6b72;--pv-c5:#a3afab;--pv-c6:#53a093;--pv-c7:#8c8172;--pv-c8:#b8862e;--pv-hi:#c2185b;--pv-grid:#c3cbc3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) #viewer{--pv-c0:#e8ebe4;--pv-c1:#6fb8ae;--pv-c2:#d79a63;--pv-c3:#e7a97c;--pv-c4:#93aeb3;--pv-c5:#6f817d;--pv-c6:#a6d8cf;--pv-c7:#a89c8d;--pv-c8:#e0b75a;--pv-hi:#ff6fa5;--pv-grid:#2b3a3d}}
+:root[data-theme="dark"] #viewer{--pv-c0:#e8ebe4;--pv-c1:#6fb8ae;--pv-c2:#d79a63;--pv-c3:#e7a97c;--pv-c4:#93aeb3;--pv-c5:#6f817d;--pv-c6:#a6d8cf;--pv-c7:#a89c8d;--pv-c8:#e0b75a;--pv-hi:#ff6fa5;--pv-grid:#2b3a3d}
 .pv{display:flex;flex-direction:column;gap:0;min-width:0}
 .pv-stage{position:relative;width:100%;aspect-ratio:16/9;max-height:70vh;min-height:260px;border:1px solid var(--line);background:var(--card);overflow:hidden}
 .pv-stage canvas{display:block;width:100%;height:100%;outline:none;cursor:grab}
@@ -384,11 +384,11 @@ footer .in{padding-block:28px;border-top:1px solid var(--line);display:flex;just
     var hiMesh = null;
 
     function recolor(){
-      for (var i = 0; i < L; i++) if (mats[i]) mats[i].color.set(cssVar("--pv-c" + (i % 8)));
+      for (var i = 0; i < L; i++) if (mats[i]) mats[i].color.set(cssVar("--pv-c" + (i % 9)));
       hiMat.color.set(cssVar("--pv-hi"));
       grid.material.color.set(cssVar("--pv-grid"));
       var sw = layersEl.querySelectorAll("i[data-l]");
-      for (var s = 0; s < sw.length; s++) sw[s].style.background = "var(--pv-c" + (+sw[s].getAttribute("data-l") % 8) + ")";
+      for (var s = 0; s < sw.length; s++) sw[s].style.background = "var(--pv-c" + (+sw[s].getAttribute("data-l") % 9) + ")";
       req();
     }
 
